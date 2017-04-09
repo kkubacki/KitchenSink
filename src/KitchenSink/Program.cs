@@ -44,6 +44,9 @@ namespace KitchenSink
             Handle.GET("/KitchenSink/partial/button", () => new ButtonPage());
             Handle.GET("/KitchenSink/button", () => WrapPage<ButtonPage>("/KitchenSink/partial/button"));
 
+            Handle.GET("/KitchenSink/partial/sortablelist", () => new SortAbleListPage());
+            Handle.GET("/KitchenSink/sortablelist", () => WrapPage<SortAbleListPage>("/KitchenSink/partial/sortablelist"));
+
             Handle.GET("/KitchenSink/partial/breadcrumb",
                 () => { return Db.Scope(() => { return new BreadcrumbPage(); }); });
             Handle.GET("/KitchenSink/breadcrumb", () => WrapPage<BreadcrumbPage>("/KitchenSink/partial/breadcrumb"));

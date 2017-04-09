@@ -1,0 +1,14 @@
+﻿<link rel="import" href="/sys/polymer/polymer.html">
+<link rel="import" href="/sys/hot-table/hot-table.html" />
+<link rel="import" href="/sys/hot-table/src/hot-table-style.html" />
+<template>
+    <template is="dom-bind">
+        <h1>People list</h1>
+        <hot-table datarows="{{model.Persons}}">
+            <hot-column value="Name$" header="Name"></hot-column>
+            <hot-column value="Surname$" header="Surname"></hot-column>
+            <hot-column value="Order$" header="Order"></hot-column>
+        </hot-table>
+
+    </template>
+</template>
